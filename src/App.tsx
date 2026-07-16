@@ -5,7 +5,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { LayoutGrid, Eye, Download, Info, CheckCircle, RotateCcw, Calendar, Activity, AlertCircle, AlertOctagon, LayoutDashboard, Database, Package } from 'lucide-react';
+import { LayoutGrid, Eye, Download, Info, CheckCircle, RotateCcw, Calendar, Activity, AlertCircle, AlertOctagon, LayoutDashboard, Database, Package, Pencil } from 'lucide-react';
 import { toPng } from 'html-to-image';
 
 import { MonthlyRecord, IncidenciaDetail, ProjectSettings, DashboardWidgetConfig, Month, MaterialItem } from './types';
@@ -467,12 +467,12 @@ export default function App() {
                         Origen de Datos
                       </span>
                     </div>
-                    <span className={`inline-flex items-center rounded-md px-1.5 py-0.5 text-[9px] font-black uppercase tracking-wider ${
+                    <span className={`inline-flex items-center justify-center rounded-lg p-1.5 transition-colors duration-150 ${
                       currentTab === 'source-data'
                         ? 'bg-white/20 text-white'
-                        : 'bg-indigo-100 text-indigo-800'
+                        : 'bg-indigo-100 text-indigo-700'
                     }`}>
-                      Live
+                      <Pencil className="h-3.5 w-3.5" />
                     </span>
                   </button>
                 </div>
