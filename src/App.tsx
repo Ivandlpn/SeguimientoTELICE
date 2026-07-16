@@ -72,7 +72,7 @@ export default function App() {
         let parsed = JSON.parse(stored) as DashboardWidgetConfig[];
         // Check if we need to migrate/reset because of structural changes or old names
         const hasMateriales = parsed.some((w) => w.id === 'materiales');
-        const hasCorrectTitles = parsed.some((w) => w.title === 'Preventivos Mensual');
+        const hasCorrectTitles = parsed.some((w) => w.title === 'Preventivo Mensual' || w.title === 'Preventivos Mensual');
         if (!hasMateriales || !hasCorrectTitles || parsed.length !== DEFAULT_WIDGETS.length) {
           localStorage.setItem('telemando_widgets', JSON.stringify(DEFAULT_WIDGETS));
           return DEFAULT_WIDGETS;
@@ -81,6 +81,7 @@ export default function App() {
         parsed = parsed.map(w => {
           if (w.id === 'incidencias') return { ...w, title: 'Fiabilidad' };
           if (w.id === 'preventivos-anual') return { ...w, title: 'Preventivo Anual' };
+          if (w.id === 'preventivos-mensual') return { ...w, title: 'Preventivo Mensual' };
           return w;
         });
         return parsed;

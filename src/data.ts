@@ -1654,7 +1654,7 @@ export const DEFAULT_SETTINGS: ProjectSettings = {
 };
 
 export const DEFAULT_WIDGETS: DashboardWidgetConfig[] = [
-  { id: 'preventivos-mensual', title: 'Preventivos Mensual', visible: true, order: 1 },
+  { id: 'preventivos-mensual', title: 'Preventivo Mensual', visible: true, order: 1 },
   { id: 'preventivos-anual', title: 'Preventivo Anual', visible: true, order: 2 },
   { id: 'incidencias', title: 'Fiabilidad', visible: true, order: 3 },
   { id: 'materiales', title: 'Materiales', visible: true, order: 4 },
