@@ -77,10 +77,19 @@ export default function Header({
       </div>
 
       {/* Main Metadata Display */}
-      <div className="p-6 md:p-8 bg-linear-to-b from-white to-slate-50/20">
-        <span className="text-indigo-600 font-mono text-xs font-bold uppercase tracking-widest bg-indigo-50 px-2.5 py-1 rounded-full border border-indigo-100">
-          CONTRATO DE SERVICIOS
-        </span>
+      <div className="p-6 md:p-8 bg-linear-to-b from-white to-slate-50/20 border-l-4 border-l-indigo-600">
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="text-indigo-700 font-mono text-[10px] font-bold uppercase tracking-wider bg-indigo-50/80 px-2.5 py-1 rounded-full border border-indigo-150 shadow-2xs">
+            SEGUIMIENTO DE CONTRATO
+          </span>
+          <span className="inline-flex items-center gap-1.5 text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-150 text-[10px] font-bold tracking-wider uppercase shadow-2xs">
+            <span className="relative flex h-1.5 w-1.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
+            </span>
+            CONTRATO ACTIVO
+          </span>
+        </div>
         <h1 className="text-xl md:text-2xl lg:text-3xl font-extrabold tracking-tight text-slate-900 mt-4 leading-tight font-display">
           Mantenimiento de las Instalaciones de Telemando de Energía
         </h1>
@@ -89,9 +98,9 @@ export default function Header({
         </p>
 
         {/* Info Pill Badges */}
-        <div className="flex flex-wrap gap-4 mt-6 pt-6 border-t border-slate-150 text-xs text-slate-500 items-center">
-          <div className="flex items-center gap-1.5">Año: <strong className="text-slate-700 font-semibold">2026</strong></div>
-          <div className="text-slate-300 hidden sm:inline">•</div>
+        <div className="flex flex-wrap gap-4 mt-6 pt-6 border-t border-slate-100 text-xs text-slate-500 items-center">
+          <div className="flex items-center gap-1.5">Año fiscal: <strong className="text-indigo-900 font-bold bg-indigo-50/60 px-2 py-0.5 rounded-md border border-indigo-100/40">2026</strong></div>
+          <div className="text-slate-200 hidden sm:inline">•</div>
           <div className="flex items-center gap-1.5">Última actualización: <strong className="text-slate-700 font-semibold">{lastUpdated}</strong></div>
         </div>
       </div>
