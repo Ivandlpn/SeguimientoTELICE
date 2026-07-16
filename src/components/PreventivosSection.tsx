@@ -991,14 +991,17 @@ export default function PreventivosSection({ records, currentMonth, showOnly }: 
                   <span className="w-4 h-4 bg-[#002060] rounded-sm"></span>
                   <span>EJECUTADO</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <span className="w-4 h-4 bg-[#ff0000] rounded-sm"></span>
-                  <span>DESVIACIÓN -</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="w-4 h-4 bg-[#22c55e] rounded-sm"></span>
-                  <span>DESVIACIÓN +</span>
-                </div>
+                {executedPct < plannedYtdPct ? (
+                  <div className="flex items-center gap-2">
+                    <span className="w-4 h-4 bg-[#ff0000] rounded-sm"></span>
+                    <span>DESVIACIÓN -</span>
+                  </div>
+                ) : (
+                  <div className="flex items-center gap-2">
+                    <span className="w-4 h-4 bg-[#22c55e] rounded-sm"></span>
+                    <span>DESVIACIÓN +</span>
+                  </div>
+                )}
                 <div className="flex items-center gap-2">
                   <span className="w-4 h-4 bg-[#d9d9d9] rounded-sm"></span>
                   <span>PENDIENTE 2026</span>
